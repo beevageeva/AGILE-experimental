@@ -4,7 +4,8 @@ $(error AMRVAC_DIR is not set)
 endif
 
 # Can be needed to compile the compare_log utility
-ARCH ?= debug
+#ARCH ?= nvidia
+ARCH ?= nvidiadebug
 export ARCH
 
 # Location of setup script

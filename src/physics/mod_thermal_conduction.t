@@ -213,6 +213,8 @@ contains
       mf(ixO^S,1:ndim)=w(ixO^S,iw_mag(1:ndim))
     end if
     ! B**2
+    ! nvidia FAILS
+    !tmp(ixO^S)=sum(mf(ixO^S,1:ndim)**2,dim=ndim+1)
     tmp=sum(mf**2,dim=ndim+1)
     ! B_i**2/B**2
     where(tmp(ixO^S)/=0.d0)

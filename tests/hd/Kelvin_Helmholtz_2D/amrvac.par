@@ -9,12 +9,15 @@
  &savelist
    itsave(1,1)     = 0
    itsave(1,2)     = 0
-   dtsave_log       = 1.d-1
+   !dtsave_log       = 1.d-1
+   ditsave_log       = 1
    dtsave_dat       = 2.d-1
  /
 
  &stoplist
-   time_max=3.0d0
+   !!time_max=3.0d0
+   !it_max=1000
+   it_max=100
  /
 
  &methodlist
@@ -31,16 +34,22 @@
  /
 
  &meshlist
-   refine_max_level   = 3
-   block_nx1          = 10
-   block_nx2          = 10
-   domain_nx1         = 50
-   domain_nx2         = 50
+   refine_max_level   = 1
+   block_nx1          = 8
+   block_nx2          = 8
+   !!domain_nx1         = 4096
+   !domain_nx1         = 2048
+   !domain_nx2         = 2048
+   domain_nx1         = 256
+   domain_nx2         = 256
    xprobmin1       = 0.0d0
    xprobmax1       = 1.0d0
    xprobmin2       = 0.0d0
    xprobmax2       = 1.0d0
    iprob=1
+  ! numblocks = 65536
+  !max_blocks=20000
+
  /
   
  &paramlist
